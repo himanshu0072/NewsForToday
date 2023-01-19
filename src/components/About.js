@@ -4,14 +4,19 @@ export default function About() {
   return (
     <>
       <div
-        className="container my-2">
-        <h2 className="my-2">About NewsForToday</h2>
+        className="container my-5">
+        <h2 className="my-3">About NewsForToday</h2>
         <p>
-          Text Master is a project to provide as many online computer utilities
-          (tools) to all users around the world as possible. The use of
+          This is a News App based web application which provides you a better 
+          news reading experience to read a better quality of news with your interest.
+          If you are intrested in reading the news on daily basis then this will give
+          you a better experience about the news reading. So use this Appilication and Enjoy👍</p>
+
+          <p>NewsForToday is a project to provide you a fresh and useful news 
+          (updated) to all users around the world as possible. The use of
           utilities is and will be free of charge. These utilities can be
           considered as accessories to Online Operating Systems (such as Chrome
-          OS). The founder of Text Master is Mladen Adamovic. Email:
+          OS). The founder of NewsForToday is Mladen Adamovic. Email:
           himanshupr7@gmail.com This website started in December 2022. In
           January 2023, the website was updated with the second version of the
           software, making the website fully compliant with the Chrome Browser.
@@ -38,9 +43,8 @@ export default function About() {
             utility, if you think that they might be interested in them
           </li>
         </ol>
-        <p>
-          This website is developed by Himanshu Prajapati.If you have any idea about text utility then please share with us on : himanshupr7@gmail.com. For More Enquiry please click the button below 👇
-        </p>
+        <p>Thank You <br/> 
+          Team NewsForToday </p>
         <a
           href="https://connectit000.000webhostapp.com/himanshu/"
           target="_blank" rel="noreferrer"

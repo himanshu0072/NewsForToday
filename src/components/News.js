@@ -60,19 +60,19 @@ export default class News extends Component {
   render() {
     return (
       <>
-      <div className='container my-5'>
+      <div className='container my-4'>
         <div className='text-center'>
         <h2 className='my-1'>NewsForToday - Top Headlines</h2> 
         {this.state.loading && <Spinner/>}
         </div> 
-        <div className='row my-5'>
+        <div className='row my-4'>
         {!this.state.loading && this.state.articles.map((element)=>{
-          return <div className='col-md-4 my-2' key={element.url}>
+          return <div className='col-md-3 my-2' key={element.url}>
             <NewsItems  title={element.title?element.title:""} description={element.description?element.description.slice(0,90):""} imageUrl={element.urlToImage}
             newsUrl={element.url}/>
           </div>
         })}
-        <div className='container d-flex justify-content-between my-5'>
+        <div className='container d-flex justify-content-between my-4'>
         <button disabled={this.state.page<=1} type="button" className="btn btn-dark" onClick={this.handlePreClick}>	&larr; Previous</button>
         <button disabled={this.state.page +1 > Math.ceil(this.state.totalResults/this.props.pageSize)} type="button" className="btn btn-dark" onClick={this.handleNextClick}> Next 	&rarr;</button>
         </div>     

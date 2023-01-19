@@ -10,12 +10,13 @@ export default class App extends Component {
     return (
       <>
       <Router>
-          <Navbar/>
-          <News pageSize={6} />
-
-        <Routes>
-          <Route path="/about" element={<About/>}></Route>
-        </Routes>
+            <Navbar/>
+          <Routes>
+            <Route path='/' element={<News pageSize={8} />}></Route>
+          </Routes>
+          <Routes>
+            <Route path="/about" element={<About/>}></Route>
+          </Routes>
 
       </Router>
       </>
