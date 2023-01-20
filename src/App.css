@@ -1,0 +1,36 @@
+/* css for navbar responsiveness */
+#mainNav{
+    font-size: 28px;
+}
+.nav-item{
+    font-size: 18px;
+}
+@media only screen and (max-width: 600px) {
+    #mainNav{
+        font-size: 20px;
+    }
+    .nav-item{
+        font-size: 16px;
+    }
+  }
+
+/* css for category Navbar */
+#catNav{
+    font-size: 14px;
+}
+@media only screen and (max-width: 600px) {
+    #catNav{
+        margin-top: 15px;
+        font-size: 16px;
+    }
+  }
+
+/* css for oops error message */
+.oops img{
+    width: 30%;
+    display: flex;
+}
+.oops {
+    display: flex;
+    justify-content: center;
+}
