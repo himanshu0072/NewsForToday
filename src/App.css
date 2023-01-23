@@ -34,3 +34,8 @@
     display: flex;
     justify-content: center;
 }
+
+/* css for offline popup
+.offline{
+    color: red;
+} */
