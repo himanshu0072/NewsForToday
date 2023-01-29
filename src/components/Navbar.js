@@ -41,9 +41,9 @@ export class Navbar extends Component {
         </nav>
 
         {/* for category of the news */}
-        <nav className="container navbar navbar-expand-lg navbar-light bg-light" id="catNav">
+        <nav className="container navbar navbar-expand-lg navbar-light bg-light Newstype" id="catNav">
             <div className="collapse navbar-collapse d-flex justify-content-center" >
-              <ul className="navbar-nav mr-auto">
+              <ul className="navbar-nav">
                 <li className="nav-item">
                   <Link className="nav-link" to="/health">Health</Link>
                 </li>

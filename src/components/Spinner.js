@@ -5,7 +5,9 @@ export default class Spinner extends Component {
   render() {
     return (
       <>
-      <img src={loading} alt="loading"/>
+      <div className='text-center my-4'>
+      <img src={loading} alt="loading" height="80px" />
+      </div> 
       </>
     )
   }
