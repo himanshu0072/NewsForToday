@@ -15,13 +15,55 @@
   }
 
 /* css for category Navbar */
-#catNav{
+.Newstype{
+    width: 100%;
     font-size: 14px;
-}
+ } 
+.grid-item {
+    text-align: center;
+    font-size: 22px;
+    text-decoration: none;
+    color: white; 
+    margin-left: 5px;
+    grid-gap: 15px;
+  }
+  .grid-container{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    list-style-type: none;
+    position: fixed;
+    z-index: 2;
+    background-color: black;
+    color: white;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin: 0px;
+  }
 @media only screen and (max-width: 600px) {
     .Newstype{
-        font-size: 20px;
-    }
+       font-size: 20px;
+       padding-bottom: 10px;
+    } 
+
+      .grid-container{
+        font-size: 10px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        list-style-type: none;
+        position: fixed;
+        z-index: 2;
+        background-color: black;
+
+      }
+    .grid-item {
+        grid-gap: 15px;
+        font-size: 14px;
+        text-align: center;
+        text-decoration: none;
+        color: white;     
+      }
 
   }
 

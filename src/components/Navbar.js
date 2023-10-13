@@ -5,7 +5,7 @@ export class Navbar extends Component {
   render() {
     return (
       <>
-        <nav className="navbar sticky-top navbar-expand-lg navbar-dark bg-dark" id="mainNav">
+        <nav className="navbar sticky-top navbar-expand-lg navbar-dark  bg-dark" id="mainNav">
           <div className="container-fluid">
             <a className="navbar-brand" href="/">
               NewsForToday
@@ -41,30 +41,30 @@ export class Navbar extends Component {
         </nav>
 
         {/* for category of the news */}
-        <nav className="container navbar navbar-expand-lg navbar-light bg-light Newstype" id="catNav">
-            <div className="collapse navbar-collapse d-flex justify-content-center" >
-              <ul className="navbar-nav">
+        <div className="Newstype" id="catNav">
+            <div className="d-flex justify-content-center">
+              <ul className="grid-container">
                 <li className="nav-item">
-                  <Link className="nav-link" to="/health">Health</Link>
+                  <Link className="grid-item " to="/health">Health</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/business">Business </Link>
+                  <Link className="grid-item " to="/business">Business </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/science">Science </Link>
+                  <Link className="grid-item " to="/science">Science </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/technology">Technology</Link>
+                  <Link className="grid-item " to="/technology">Technology</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/entertainment">Entertainment</Link>
+                  <Link className="grid-item " to="/entertainment">Entertainment</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/sports">Sports</Link>
+                  <Link className="grid-item " to="/sports">Sports</Link>
                 </li>
               </ul>
             </div>
-          </nav>
+          </div>
       </>
     );
   }

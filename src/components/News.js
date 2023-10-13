@@ -3,8 +3,6 @@ import NewsItems from "./NewsItems";
 import Spinner from "./Spinner";
 import PropTypes from "prop-types";
 import InfiniteScroll from "react-infinite-scroll-component";
-
-const api="e42deeaea71342d689bd9e70332d2ed5";
 export default class News extends Component {
   static defaultProps = {
     country: 'in',
@@ -31,7 +29,7 @@ constructor(props) {
 
   async updateNews() {
     this.props.setProgress(20);
-    const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${api}&page=${this.state.page}&pageSize=${this.props.pageSize}`;
+    const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.api}&page=${this.state.page}&pageSize=${this.props.pageSize}`;
     this.setState({ loading: true });
     this.props.setProgress(30);
     let data = await fetch(url);
@@ -62,7 +60,7 @@ constructor(props) {
 
   fetchMoreData = async () => {  
     this.setState({page: this.state.page + 1})
-    const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${api}&page=${this.state.page}&pageSize=${this.props.pageSize}`;
+    const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.api}&page=${this.state.page}&pageSize=${this.props.pageSize}`;
     let data = await fetch(url);
     let parsedData = await data.json()
     this.setState({
@@ -76,13 +74,13 @@ constructor(props) {
     return (
       <> 
           <div className="text-center">
-            <h2 className="my-4">NewsForToday - Top Headlines</h2>
+            <h2 className="my-5">NewsForToday - Top Headlines</h2>
             {/* {this.state.loading && <Spinner />} */}
           </div>
           <InfiniteScroll
           dataLength={this.state.articles.length}
           next={this.fetchMoreData}
-          hasMore={this.state.articles.length%8 !== 6} // hasMore={this.state.articles.length !== this.state.totalResults}
+          hasMore={this.state.articles.length !== this.state.totalResults} // hasMore={this.state.articles.length%8 !== 6} 
           loader={<Spinner/>}>
             
           <div className="container">
